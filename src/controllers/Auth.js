@@ -63,7 +63,7 @@ try{
 
     if(await bcrypt.compare(password,hashedPassword))
     {
-        const token = jwt.sign({payload:findUser._id},process.env.jwt_Secret,
+        const token = jwt.sign({payload:findUser._id},process.env.JWT_SECRET,
             {
                 expiresIn : "24h",
             }

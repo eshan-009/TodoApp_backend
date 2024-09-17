@@ -11,7 +11,7 @@ try{
 if(token)
 {
 
-    const decode =  await jwt.verify(token,process.env.jwt_secret)
+    const decode =  await jwt.verify(token,process.env.JWT_SECRET)
     req.body.userData = decode.payload;
 }
 else
