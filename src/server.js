@@ -11,7 +11,6 @@ const PORT =process.env.PORT || 4000;
 dbConnect();
 app.use(cors({credentials: true,
     origin: ['http://127.0.0.1:5500' ,`https://eshan-009.github.io/TodoApp_FrontEnd`,`https://eshan-009.github.io/`],
-    mode : no-cors
 
  }))
 app.use(cookieParser());
