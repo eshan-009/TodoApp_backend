@@ -11,7 +11,7 @@ const PORT =process.env.PORT || 4000;
 dbConnect();
 app.use(cors({
     credentials: true,
-    origin: ['https://todo-app-react-seven-navy.vercel.app',`http://localhost:5173`,'http://127.0.0.1:5500',`https://eshan-009.github.io/TodoApp_FrontEnd/`,`https://eshan-009.github.io`,`https://eshan-009.github.io/TodoApp_FrontEnd`,`https://eshan-009.github.io/`],
+    origin: ['https://todo-app-react-kud8x13f7-eshan-sharmas-projects.vercel.app','https://todo-app-react-seven-navy.vercel.app',`http://localhost:5173`,'http://127.0.0.1:5500',`https://eshan-009.github.io/TodoApp_FrontEnd/`,`https://eshan-009.github.io`,`https://eshan-009.github.io/TodoApp_FrontEnd`,`https://eshan-009.github.io/`],
     methods: ['GET', 'POST', 'PUT', 'DELETE','PATCH','OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
  }))
