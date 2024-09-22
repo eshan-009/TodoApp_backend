@@ -29,7 +29,7 @@ async function updateTodo(req,res) {
 
 
     productData.save();
-    console.log(productData)
+   
   
 
         return res.status(200).json({
