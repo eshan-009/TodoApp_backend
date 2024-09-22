@@ -1,9 +1,12 @@
 const Product = require("../models/todo");
+const User = require("../models/user");
 
 async function getTodo(req,res) {
 
 try{
     const {id} = req.params;
+    const {userData} =req.body
+   
     if(id)
     {
         const product = await Product.findById({_id:id});
@@ -12,11 +15,14 @@ try{
             data : product
         })
     }
-    
-    const products = await Product.find()
+   
+    // const user = await User.findById(userData,{todos:true}).populate("todos")
+   const user =  await User.findById(userData).select("todos").populate('todos');
+ 
+    // const products = await Product.find()
     return res.status(200).json({
         message:"Todo fetched successfully",
-        data : products
+        data : user.todos
     })
 }
 catch (err){

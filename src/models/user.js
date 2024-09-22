@@ -13,7 +13,8 @@ const userSchema = new mongoose.Schema({
         required:true
     },
     todos :{
-        type : [mongoose.Types.ObjectId]
+        type : [mongoose.Types.ObjectId],
+        ref: 'Todo'
     }
 })
 

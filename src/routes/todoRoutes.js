@@ -9,7 +9,7 @@ const { deleteTodo } = require("../controllers/deleteTodo");
 
 
 router.post("/addTodo",auth,addTodo)
-router.get("/getTodo",getTodo)
+router.get("/getTodo",auth,getTodo)
 router.get("/getTodo/:id",getTodo)
 router.put("/updateTodo/:id",auth,updateTodo)
 router.patch("/updateTodoStatus/:id",auth,updateTodoStatus)
